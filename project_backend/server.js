@@ -7,6 +7,7 @@ const authRoutes = require('./routes/authRoutes');
 const promoRoutes = require('./routes/promoRoutes');
 const busRoutes = require('./routes/busRoutes');
 const tripRoutes = require('./routes/tripRoutes');
+const cartRoutes = require('./routes/cart');  // Importar las rutas del carrito
 
 const app = express();
 
@@ -22,6 +23,7 @@ app.use('/api/auth', authRoutes);  // Rutas de autenticación
 app.use('/api', promoRoutes);  // Rutas de códigos promocionales
 app.use('/api', busRoutes);  // Rutas de autobuses
 app.use('/api', tripRoutes);  // Rutas de viajes
+app.use('/api', cartRoutes);  // Agregar las rutas del carrito
 
 // Ruta de ejemplo
 app.get('/', (req, res) => {
